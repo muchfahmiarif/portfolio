@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-    --blue: #252D85;
+    --blue: #0BC4C5;
     --black: #444;
     --light-color: #777;
     --bg-color: #e0e0e0;
     --border: .1rem solid rgba(0,0,0,.2);
-    --box-shadow: .4rem .4rem 1rem #ccc,
-                -.4rem -.4rem 1rem #fff;
-    --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
-                -.4rem -.4rem 1rem #fff inset;
+    --box-shadow: .6rem .6rem .8rem #ccc,
+                -.6rem -.6rem .8rem #fff;
+    --box-shadow-inset: .6rem .6rem .8rem #ccc inset,
+                -.6rem -.6rem .8rem #fff inset;
     
 }
 
@@ -36,6 +36,17 @@ body{
     padding-left: 30rem;
 }
 
+body.active{
+    --black: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: .1rem solid rgba(0,0,0,.4);
+    --box-shadow: .6rem .6rem .8rem #111,
+                -.6rem -.6rem .8rem #333;
+    --box-shadow-inset: .6rem .6rem .8rem #111 inset,
+                -.6rem -.6rem .8rem #333 inset;
+}
+
 .header{
     position: fixed;
     top: 0; left: 0;
@@ -45,10 +56,11 @@ body{
     border-right: var(--border);
     padding: 2rem;
     text-align: center;
+    height: 100%;
 }
 
 .header .user img{
-    max-width: 100%;
+    width: 80%;
     margin: 2rem 0;
     border-radius: 50%;
     border: 1rem solid transparent;
@@ -82,4 +94,130 @@ body{
 
 .header .navbar a:hover{
     box-shadow: var(--box-shadow-inset);
+    color: var(--blue);
+}
+
+#menu-btn{
+    position: fixed;
+    top: 1.5rem; left: 2rem;
+    z-index: 101;
+    text-align: center;
+    height: 5rem;
+    color: var(--black);
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    display: none;
+}
+
+#menu-btn:hover{
+    box-shadow: var(--box-shadow-inset);
+    color: var(--blue);
+}
+
+#theme-toggler{
+    position: fixed;
+    top: 1.5rem; right: 2rem;
+    z-index: 101;
+    text-align: center;
+    height: 5rem;
+    color: var(--black);
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+#theme-toggler:hover{
+    box-shadow: var(--box-shadow-inset);
+    color: var(--blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%
+    }
+    .header{
+        left: -110%;
+        height: 100%;
+        padding-bottom: 0rem;
+        padding-top: 10rem;
+    }
+    .header.active{
+        left: 0%;
+        transition: .4s linear;
+    }
+    body{
+        padding-left: 0;
+    }
+    #menu-btn{
+        display: initial;
+    }
+}
+
+@media (max-width: 450px) {
+    html{
+        font-size: 50%
+    }
+    .header{
+        width: 100%;
+        border-right: 0;
+    }
 }
