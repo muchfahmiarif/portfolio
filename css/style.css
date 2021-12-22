@@ -23,6 +23,7 @@
     text-transform: capitalize;
     transition: .2s linear;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 html{
@@ -45,6 +46,41 @@ body.active{
                 -.6rem -.6rem .8rem #333;
     --box-shadow-inset: .6rem .6rem .8rem #111 inset,
                 -.6rem -.6rem .8rem #333 inset;
+}
+
+section{
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3.5rem;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background: none;
+    color: var(--black);
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover{
+    box-shadow: var(--box-shadow-inset);
+    color: var(--blue);
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.heading span{
+    color: var(--blue);
+    text-transform: uppercase;
 }
 
 .header{
@@ -80,6 +116,7 @@ body.active{
 
 .header .navbar{
     padding-top: 1rem;
+    
 }
 
 .header .navbar a{
@@ -138,12 +175,106 @@ body.active{
     color: var(--blue);
 }
 
+.home{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 
+.home .content h3{
+    color: var(--black);
+    font-size: 7rem;
+    line-height: 8rem;
+    text-transform: uppercase;
+}
 
+.home .content p{
+    font-size: 2rem;
+    color: var(--blue);
+    padding-bottom: .5rem;
+}
 
+.home .share {
+    position: relative;
+    top: 15rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
 
+.home .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    box-shadow: var(--box-shadow);
+    margin: .5rem;
+    font-size: 3rem;
+    color: var(--light-color);
+}
 
+.home .share a:hover{
+    box-shadow: var(--box-shadow-inset);
+    color: var(--blue);
+}
 
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+}
+
+.about .row .box-container{
+    flex: 1 1 40rem;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.about .row .box-container .box{
+    flex: 1 1 25rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.about .row .box-container .box h3{
+    font-size: 5rem;
+    color: var(--black);
+}
+
+.about .row .box-container .box p{
+    font-size: 2rem;
+    color: var(--light-color);
+    padding: .5rem 0;
+    line-height: 1 1;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3.5rem;
+    color: var(--black);
+    line-height: 1.8;
+}
+
+.about .row .content h3 span{
+    font-size: 3.5rem;
+    color: var(--blue);
+    line-height: 1.8;
+}
+
+.about .row .content p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
 
 
 
@@ -190,7 +321,7 @@ body.active{
 
 /* media queries */
 
-@media (max-width:991px){
+@media only screen and (max-width:991px){
     html{
         font-size: 55%
     }
@@ -198,7 +329,7 @@ body.active{
         left: -110%;
         height: 100%;
         padding-bottom: 0rem;
-        padding-top: 10rem;
+        padding-top: 5rem;
     }
     .header.active{
         left: 0%;
@@ -210,14 +341,22 @@ body.active{
     #menu-btn{
         display: initial;
     }
+    .header .user img{
+        max-width: 80%;
+    }
 }
 
-@media (max-width: 450px) {
+@media only screen and (max-width: 450px) {
     html{
         font-size: 50%
     }
     .header{
         width: 100%;
         border-right: 0;
+        padding-bottom: 0rem;
+        padding-top: 0rem;
+    }
+    .header .user img{
+        max-width: 50%;
     }
 }
