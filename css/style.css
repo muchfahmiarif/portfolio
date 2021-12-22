@@ -223,11 +223,15 @@ section{
     color: var(--blue);
 }
 
+.about{
+    width: 100%;
+}
+
 .about .row{
     display: flex;
     align-items: center;
-    flex-wrap: wrap-reverse;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 4rem;
 }
 
 .about .row .box-container{
@@ -280,7 +284,9 @@ section{
     padding: 1rem 0;
 }
 
-
+.about .row .progress{
+    flex: 1 1  40rem;
+}
 
 
 
