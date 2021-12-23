@@ -133,10 +133,27 @@ section{
     color: var(--black);
 }
 
+.header .navbar a.active,
 .header .navbar a:hover{
     box-shadow: var(--box-shadow-inset);
     color: var(--blue);
 }
+
+/* header nav a{
+    display: block;
+    margin: 3rem 0;
+    padding: .7rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+}
+
+header nav a.active,
+header nav a:hover{
+    box-shadow: var(--box-shadow-inset);
+    color: var(--blue);
+} */
 
 #menu-btn{
     position: fixed;
@@ -284,12 +301,59 @@ section{
     padding: 1rem 0;
 }
 
+.about .row:nth-child(3){
+    padding-top: 2rem;
+}
+
 .about .row .progress{
+    padding-top: 2rem;
     flex: 1 1  40rem;
 }
 
+.about .row .progress h3{
+    color: var(--black);
+    font-weight: normal;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.about .row .progress .bar{
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    height: 2rem;
+    padding: .5rem;
+    margin: 1rem 0;
+}
 
+.about .row .progress .bar span{
+    display: block;
+    height: 100%;
+    background: var(--blue);
+    border-radius: 5rem;    
+}
+
+.about .row .progress .bar-1-1 span{
+    width: 10%;
+    /* animation: 2s; */
+}
+.about .row .progress .bar-1-2 span{
+    width: 40%;
+    /* animation: 2s; */
+}
+.about .row .progress .bar-1-3 span{
+    width: 20%;
+    /* animation: 2s; */
+}
+.about .row .progress .bar-2-1 span{
+    width: 50%;
+    /* animation: 2s; */
+}
+.about .row .progress .bar-2-2 span{
+    width: 10%;
+    /* animation: 2s; */
+}
 
 
 
