@@ -411,16 +411,97 @@ header nav a:hover{
     color: #fff;
 }
 
+.portfolio .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: 2rem;
+}
 
+.portfolio .box-container .box{
+    height: 25rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    border: 1rem solid transparent;
+}
 
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
+.portfolio .box-container .box .content{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-color);
+    display: grid;
+    place-items: center;
+    transform: scale(0);
+}
 
+.portfolio .box-container .box:hover .content{
+    transform: scale(1);
+}
 
+.portfolio .box-container .box .content h3{
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: uppercase;
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition-delay: -3s;
+}
 
+.portfolio .box-container .box:hover .content h3{
+    transform: translateY(0rem);
+    opacity: 1;
+}
 
+.contact form{
+    margin: 1rem auto;
+    max-width: 70rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
 
+.contact form .box{
+    padding: 1rem 1.5rem;
+    width: 100%;
+    background: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    text-transform: none;
+    margin: .7rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
 
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+}
 
+.contact form .box:focus{
+    box-shadow: var(--box-shadow-inset);
+}
+
+.credits{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 1rem;
+    border-top: var(--border);
+    color: var(--black);
+}
+
+.credits span{
+    color: var(--blue);
+}
 
 
 
