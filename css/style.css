@@ -169,6 +169,7 @@ header nav a:hover{
     cursor: pointer;
     box-shadow: var(--box-shadow);
     display: none;
+    background-color: var(--bg-color);
 }
 
 #menu-btn:hover{
@@ -189,6 +190,7 @@ header nav a:hover{
     font-size: 2rem;
     cursor: pointer;
     box-shadow: var(--box-shadow);
+    background-color: var(--bg-color);
 }
 
 #theme-toggler:hover{
@@ -355,10 +357,59 @@ header nav a:hover{
     /* animation: 2s; */
 }
 
+.service .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: 2rem;
+}
 
+.service .box-container .box{
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
 
+.service .box-container .box i{
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    color: var(--light-color);
+    width: 100%;
+}
 
+.service .box-container .box h3{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+}
 
+.service .box-container .box p{
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    color: var(--light-color);
+}
+
+.service .box-container .box::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--blue);
+    z-index: -1;
+    clip-path: circle(8rem at 3% 0%);
+    transition: .4s linear;
+}
+
+.service .box-container .box:hover::before{
+    clip-path: circle(100%);
+}
+
+.service .box-container .box:hover > *{
+    color: #fff;
+}
 
 
 
